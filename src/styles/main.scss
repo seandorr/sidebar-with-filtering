@@ -16,11 +16,11 @@ body {
   }
 
   .tab-group {
+    margin-top: -1px;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
     border: 1px solid $border-color;
-    border-radius: 8px 8px 0 0;
     overflow: hidden;
 
     .tab-item {

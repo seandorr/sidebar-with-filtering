@@ -46,6 +46,19 @@ export default function App() {
         <div className="sidebar-content">
           <div ref={fixedHeightRef} className="fixed-height">
             <h2>{`Status of ${activeTab.tab1 ? "Plants" : "Materials"}`}</h2>
+            <SidebarContainer
+              title="Viewing"
+              style={{ borderRadius: "8px 8px 0 0" }}
+            >
+              <div className="status-container">
+                <StatusItem
+                  status={viewingItemContent.status}
+                  size="large"
+                  itemText={viewingItemContent.name}
+                  trend={viewingItemContent.trend}
+                />
+              </div>
+            </SidebarContainer>
             <div className="tab-group">
               <button
                 className={`tab-item ${activeTab.tab1 ? "active-tab" : ""}`}
@@ -64,16 +77,7 @@ export default function App() {
                 <span>Materials</span>
               </button>
             </div>
-            <SidebarContainer title="Viewing">
-              <div className="status-container">
-                <StatusItem
-                  status={viewingItemContent.status}
-                  size="large"
-                  itemText={viewingItemContent.name}
-                  trend={viewingItemContent.trend}
-                />
-              </div>
-            </SidebarContainer>
+
             <SidebarContainer title="Filter by Status">
               <div className="status-container">
                 <StatusItem
