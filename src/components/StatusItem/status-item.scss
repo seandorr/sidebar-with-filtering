@@ -1,0 +1,28 @@
+@import "../../styles/colors.module";
+
+.status-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  transition-delay: 75ms;
+
+  &.hoverable {
+    cursor: pointer;
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  &.active {
+    background-color: $active-color;
+  }
+
+  .close-icon {
+    fill: $close-icon-color;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/colors.module";
+
+.status-shape {
+  color: $light-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+  &.small {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.large {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.status-ok {
+    background-color: #199a19;
+  }
+
+  &.status-critical {
+    background-color: #ca1f1f;
+  }
+}

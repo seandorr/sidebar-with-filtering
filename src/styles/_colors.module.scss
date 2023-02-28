@@ -1,7 +1,14 @@
 $light-color: #ededed;
 $dark-color: #252525;
+$dark-blue-color: #001d9c;
+$border-color: #cdcdcd;
+$hover-color: #dde7ef;
+$active-color: #dbdbdb;
+$close-icon-color: #a2a2a2;
 
 :export {
   lightColor: $light-color;
+  borderColor: $border-color;
   darkColor: $dark-color;
+  closeIconColor: $close-icon-color;
 }

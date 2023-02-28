@@ -1,7 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @import "./colors.module";
 @import "./reset";
 
 body {
-  color: $light-color;
-  background-color: $dark-color;
+  font-family: "Roboto", sans-serif;
+  color: $dark-blue-color;
+  background-color: $light-color;
+}
+
+.sidebar-content {
+  margin: 40px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .tab-group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid $border-color;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+
+    .tab-item {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+      transition-delay: 75ms;
+      cursor: pointer;
+
+      &:focus-visible {
+        &:first-child {
+          border: 1px solid blue;
+          border-radius: 4px 0 0 0;
+        }
+
+        &:last-child {
+          border: 1px solid $dark-blue-color;
+          border-radius: 0 4px 0 0;
+        }
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid $border-color;
+      }
+
+      &:hover {
+        background-color: $hover-color;
+      }
+
+      &.active-tab {
+        background-color: $active-color;
+      }
+    }
+  }
+
+  .status-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .status-info-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
